@@ -32,14 +32,15 @@ The "Neutrino_osc.py" is the code for numerical simulaiotn of PMNS theory.
 
 The graph was plotted for probability vs L/E with α = e, µ, τ .The following are the
 results for the three neutrino flavors as initial states.
+
 ![Alt text](Images/Electron_vacuum_oscillation.jpg)
 ![Alt text](Images/Muon_vacuum_oscillation.jpg)
 ![Alt text](Images/Tau_vacuum_oscillation.jpg)
 ## Matter Interaction
  The code "Matter_Inter.py" gives the numerical simulation of neutrino oscillalitons for which the  potential has values V=0, $10^{-3},10^{-5}$
   
-
 The following graph was obtained when muon neutrino was taken as the initial state.
+
 ![Alt text](Images/matter_muon_electron.jpg)
 ![Alt text](Images/matter_muon_muon.jpg)
 ## Quantum Simulations
