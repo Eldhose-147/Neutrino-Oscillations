@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Neutrinos are fermionic particles ﬁrst theorized by Wolfgang Pauli and later discovered in the Cowan–Reines neutrino experiment.They belong to the neutral lepton family, which makes it incredibly diﬃcult to detect(because they only interact via the weak force) even though they are the most abundant subatomic particle in the universe.Three ﬂovors of neutrinos were predicted by the standard model, electron muon and tau neutrinos. The electron neutrino was discovered by Reines and Cowan by observing electron antineutrinos released from a nuclear reactor in South Carolina, 26 years after Pauli’s hypothesis.The second kind of neutrino, muon neutrino, was discovered by Lederman, Schwartz andn Steinberger in 1962 with the ﬁrst accelerator neutrino beam at Brookhaven National Laboratory. The tau neutrino was only discovered in 2000 in the Fermi laboratory.
+Neutrinos are fermionic particles ﬁrst theorized by Wolfgang Pauli and later discovered in the Cowan–Reines neutrino experiment. They belong to the neutral lepton family, which makes it incredibly diﬃcult to detect (because they only interact via the weak force) even though they are the most abundant subatomic particle in the universe. Three ﬂovors of neutrinos were predicted by the standard model, electron, muon and tau neutrinos. The electron neutrino was discovered by Reines and Cowan by observing electron antineutrinos released from a nuclear reactor in South Carolina, 26 years after Pauli’s hypothesis. The second kind of neutrino, muon neutrino, was discovered by Lederman, Schwartz and Steinberger in 1962 with the ﬁrst accelerator neutrino beam at Brookhaven National Laboratory. The tau neutrino was only discovered in 2000 in the Fermi laboratory.
 
 The idea of neutrino oscillation ﬁrst put forward by Pontecorvo in 1957, proposed that neutrino-antineutrino transition may occur in analogy with the neutral kaon mixing. Later Pontecorvo, Maki, Nakagawa and Sakata speculated that neutrino could change
 ﬂavor while in ﬂight, called “neutrino oscillation”, if neutrinos have mass and mixing exists between ﬂavor and mass eigenstates. In 1960 Raymond Davis observed a deﬁcit in the electron neutrino produced in the nuclear fusion in sun from the value predicted by the standard solar model. This could only have been possible if neutrinos changed ﬂavors as the travel to the earth. Later other experiments showed that the deﬁcit was 70% from the predicted value.
@@ -14,8 +14,7 @@ interconvert as the particles stream through space.
 
 
 ## PMNS Theory
-
-Pontecorvo-Maki- Nakagawa-Sakata speculated that if neutrinos have mass mixing exists between the ﬂovor and mass eigenstates.PMNS(Pontecorvo-Maki- Nakagawa-Sakata) theory states that each of the neutrino ﬂavor basis( electron, muon and tau neutrinos) can be written as a superposition of three mass eigenstates(m1,m2 and m3). The transformation from neutrino mass basis to ﬂavor basis is achieved by the PMNS matrix.
+Bruno Pontecorvo speculated that if neutrinos have mass, then mixing exists between the ﬂovor and mass eigenstates. Later the specific mechanism involving the mixing matrix was formalized by Maki, Nakagawa, and Sakata, now called the PMNS (Pontecorvo-Maki- Nakagawa-Sakata) theory. It states that each of the neutrino ﬂavor basis ( electron, muon and tau neutrinos) can be written as a superposition of three mass eigenstates (m1,m2 and m3). The transformation from neutrino mass basis to ﬂavor basis is achieved by the PMNS matrix.
 
 ![Alt text](Images/image_2023-10-08_181547922.png)
  
@@ -24,22 +23,21 @@ Pontecorvo-Maki- Nakagawa-Sakata speculated that if neutrinos have mass mixing e
 
 ## Why Quantum Simulation ?
 
-The idea of quantum simulations is the use of quantum systems to simulate other quantum systems in programmable fashion. It is impossible to truly simulate a quantum mechanical event using a classical universal device. According to the lecture by Feyman in 1981, the only way to simulate events in nature is by using a system that is quantum mechanical.Oscillating neutrino beams exhibit quantum coherence over distances of thousands of kilometers. Precise measurements of parameters in the PMNS framework might lead to new physics beyond the Standard Model. However it is very diﬃcult to determine this in neutrino oscillation experiments. Quantum simulation are the best alternatives to study this phenomenology. Thus if we could encode the state of neutrinos in some n qubit hilbert space and ﬁnd unitary gates to evolve the quantum state, we could simulate neutrino oscillation on a quantum computer. However with the present level of technology quantum simulations are noisy. Thus noise reducing algorithms are also implemented to get accurate results.
+The idea of quantum simulations is the use of quantum systems to simulate other quantum systems in programmable fashion. It is impossible to truly simulate a quantum mechanical event using a classical universal device. According to the lecture by Feyman in 1981, the only way to simulate events in nature is by using a system that is quantum mechanical.Oscillating neutrino beams exhibit quantum coherence over distances of thousands of kilometers. Precise measurements of parameters in the PMNS framework might lead to new physics beyond the Standard Model. However it is very diﬃcult to determine these in the experiments. Quantum simulation are the best alternatives to study this phenomenology. Thus if we could encode the state of neutrinos in some n qubit hilbert space and ﬁnd unitary gates to evolve the quantum state, we could simulate neutrino oscillation on a quantum computer. However with the present level of technology quantum simulations are noisy. Thus noise reducing algorithms are also implemented to get accurate results.
 
-## Numerical Simulation
+## Numerical Simulation 
 
-The "Neutrino_osc.py" is the code for numerical simulaiotn of PMNS theory.
+__Code: Neutrino_osc.py__
 
-The graph was plotted for probability vs L/E with α = e, µ, τ .The following are the
-results for the three neutrino flavors as initial states.
+The graphs below show the _flavor state probability_ as a function of _L/E_,(where L is the distance travelled and E is the evergy),for each of the initial flavor state.
 
 ![Alt text](Images/Electron_vacuum_oscillation.jpg)
 ![Alt text](Images/Muon_vacuum_oscillation.jpg)
 ![Alt text](Images/Tau_vacuum_oscillation.jpg)
 ## Matter Interaction
- The code "Matter_Inter.py" gives the numerical simulation of neutrino oscillalitons for which the  potential has values V=0, $10^{-3},10^{-5}$
+__Code: Matter_Inter.py__
   
-The following graph was obtained when muon neutrino was taken as the initial state.
+The graphs below show the _flavor state probability_ as a function of _L/E_,for an initial muon flavor state, in the presence of matter interaction. The interaction potential values used are $V=0, 10^{-3}, 10^{-5}$
 
 ![Alt text](Images/matter_muon_electron.jpg)
 ![Alt text](Images/matter_muon_muon.jpg)
@@ -61,14 +59,17 @@ The controlled-u rotation gate when the target qubit is the LSB(Least signiﬁca
 
 ## IBM Qiskit
 
-IBM has developed some of the most advanced quantum computers in the world.Moreoverthey have given free cloud access to their quantum computers through Qiskit framework.Qiskit is an open-source software development kit for working with quantum computers
+IBM has developed some of the most advanced quantum computers in the world. Moreover they have given free cloud access to their quantum computers through Qiskit framework. Qiskit is an open-source software development kit for working with quantum computers
 at the level of circuits, pulses, and algorithms and running them on prototype quantum devices on IBM Quantum Experience or on simulators on a local computer. The primary version of Qiskit uses Python programming language and is well supported on the Jupyter Notebook environment.
 
 ### QasmSimulator
 
-The QasmSimulator backend is designed to mimic an actual IBM quantum computer.The quantum measurements in a real IBM quantum computer has a lot of noise in the result. But the QasmSimulator can simulate quantum circuits both ideally and subject to noise modeling. The circuit was run in the QasmSimulator to verify the circuit and compare it with the numerical simulations. The code "Qasm_sim.ipynb" gives the simulations in QasmSimulator.
+__Code: Qasm_sim.ipynb__
+    
+The QasmSimulator backend is designed to mimic an actual IBM quantum computer. The quantum measurements in a real IBM quantum computer has a lot of noise in the result. But the QasmSimulator can simulate quantum circuits both ideally and subject to noise modeling. The circuit was run in the QasmSimulator to verify the circuit and compare it with the numerical simulations. The code "Qasm_sim.ipynb" gives the simulations in QasmSimulator.
 
 The following results were obtained.
+
 ![Alt text](Images/Electron_vacuum_QASM.jpg)
 ![Alt text](Images/Muon_vacuum_QASM.jpg)
 ![Alt text](Images/Tau_vacuum_QASM.jpg)
@@ -79,7 +80,10 @@ The QasmSimulator measurements matches exactly with the theoritical results. Thi
 
 ### Real Quantum Simulations
 
+__Code: IBM_sim_electron.ipynb, IBM_sim_muon.ipynb, IBM_sim_tau.ipynb__
+
 The quantum circuit was run on the "ibmq-manila" backend. The results obtained had a lot of noise which made the measurements deviate from thetheoritical results. Thus the "CompleteMeasFitter" and "complete-meas-cal" functions were imported from the qiskit.ignis.mitigation package. This reduced the error by signiﬁcant amount. The following results were obtained from the real quantum computer simulations.
+
 ![Alt text](Images/Electron_vacuum_IBM.jpg)
 ![Alt text](Images/Muon_vacuum_IBM.jpg)
 ![Alt text](Images/Tau_vacuum_IBM.jpg)
