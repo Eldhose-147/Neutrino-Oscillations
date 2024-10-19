@@ -3,15 +3,10 @@
 
 ## Introduction
 
-Neutrinos are fermionic particles ﬁrst theorized by Wolfgang Pauli and later discovered in the Cowan–Reines neutrino experiment. They belong to the neutral lepton family, which makes it incredibly diﬃcult to detect (because they only interact via the weak force) even though they are the most abundant subatomic particle in the universe. Three ﬂovors of neutrinos were predicted by the standard model, electron, muon and tau neutrinos. The electron neutrino was discovered by Reines and Cowan by observing electron antineutrinos released from a nuclear reactor in South Carolina, 26 years after Pauli’s hypothesis. The second kind of neutrino, muon neutrino, was discovered by Lederman, Schwartz and Steinberger in 1962 with the ﬁrst accelerator neutrino beam at Brookhaven National Laboratory. The tau neutrino was only discovered in 2000 in the Fermi laboratory.
+Neutrinos are fermionic particles ﬁrst theorized by Wolfgang Pauli and later discovered in the Cowan–Reines neutrino experiment. They belong to the neutral lepton family, which makes it incredibly diﬃcult to detect (because they only interact via the weak force) even though they are the most abundant subatomic particle in the universe. Three ﬂovors of neutrinos were predicted by the standard model, electron, muon and tau neutrinos. 
 
 The idea of neutrino oscillation ﬁrst put forward by Pontecorvo in 1957, proposed that neutrino-antineutrino transition may occur in analogy with the neutral kaon mixing. Later Pontecorvo, Maki, Nakagawa and Sakata speculated that neutrino could change
-ﬂavor while in ﬂight, called “neutrino oscillation”, if neutrinos have mass and mixing exists between ﬂavor and mass eigenstates. In 1960 Raymond Davis observed a deﬁcit in the electron neutrino produced in the nuclear fusion in sun from the value predicted by the standard solar model. This could only have been possible if neutrinos changed ﬂavors as the travel to the earth. Later other experiments showed that the deﬁcit was 70% from the predicted value.
-
-This shortfall of solar neutrinos was explained by experiments led by this year’s laure-ates, Arthur McDonald of Queen’s University in Kingston, Canada, and Takaaki Kajita of the University of Tokyo. The work revealed that the three ﬂavors of neutrino can
-interconvert as the particles stream through space.
-
-
+ﬂavor while in ﬂight, called “neutrino oscillation”, if neutrinos have mass and mixing exists between ﬂavor and mass eigenstates. 
 
 ## PMNS Theory
 Bruno Pontecorvo speculated that if neutrinos have mass, then mixing exists between the ﬂovor and mass eigenstates. Later the specific mechanism involving the mixing matrix was formalized by Maki, Nakagawa, and Sakata, now called the PMNS (Pontecorvo-Maki- Nakagawa-Sakata) theory. It states that each of the neutrino ﬂavor basis ( electron, muon and tau neutrinos) can be written as a superposition of three mass eigenstates (m1,m2 and m3). The transformation from neutrino mass basis to ﬂavor basis is achieved by the PMNS matrix.
