@@ -71,8 +71,7 @@ __Code__: [Qasm_sim.ipynb](Qasm_sim.ipynb)
 The QasmSimulator measurements matches exactly with the theoritical results. This proves that the quantum circuit built is accurate.
 
 ### Real Quantum Simulations
-
-To use an IBM quantum computer run the following code.
+To access an IBM quantum computer through the cloud, run the following codes:
 
 ```python
 from qiskit import IBMQ
@@ -87,16 +86,17 @@ To find all the backends, use the code:
 ```python
 provider.backends()
 ```
-To check the status of the backend run:
-```python
-#Here we are checking the status of 'ibmq_manila' backend
-status('ibmq_manila').to_dict()
-```
-Find a backend with less pending jobs and to use the backend run:
+
+To use a specific backend, run:
 ```python
 qcomp = provider.get_backend('ibmq_lima')
 ```
-The results obtained had a lot of noise which made the measurements deviate from the theoritical results. Thus the "CompleteMeasFitter" and "complete-meas-cal" functions were imported from the qiskit.ignis.mitigation package. This reduced the error by signiﬁcant amount. 
+To check the status of the backend run (Use the backend with least number of pending jobs for faster results):
+```python
+#Here we are checking the status of 'ibmq_manila' backend
+qcomp.status().to_dict()
+```
+The quantum circuit was run on the "ibmq-manila" backend. The results obtained had a lot of noise which made the measurements deviate from the theoritical results. Thus the "CompleteMeasFitter" and "complete-meas-cal" functions were imported from the qiskit.ignis.mitigation package. This reduced the error by signiﬁcant amount. 
 ```python
 from qiskit.ignis.mitigation.measurement import (CompleteMeasFitter,complete_meas_cal)
 ```
