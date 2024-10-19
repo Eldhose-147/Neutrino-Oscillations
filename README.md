@@ -1,12 +1,13 @@
-﻿
 # Neutrino Oscillations
 
-## Introduction
+## Project Description
 
-Neutrinos are fermionic particles ﬁrst theorized by Wolfgang Pauli and later discovered in the Cowan–Reines neutrino experiment. They belong to the neutral lepton family, which makes it incredibly diﬃcult to detect (because they only interact via the weak force) even though they are the most abundant subatomic particle in the universe. Three ﬂovors of neutrinos were predicted by the standard model, electron, muon and tau neutrinos. 
+This project aims at quantum simulation of __three flavour neutrino oscillations__ using __PMNS theory__, for both vacuum and matter interaction, as well as with and without CP violation on a subspace of a two-qubit Hilbert space. The following work is presented is this project. For more information of neutrino-oscillation and PMNS theory refer [Project report](Project_report.pdf)
 
-The idea of neutrino oscillation ﬁrst put forward by Pontecorvo in 1957, proposed that neutrino-antineutrino transition may occur in analogy with the neutral kaon mixing. Later Pontecorvo, Maki, Nakagawa and Sakata speculated that neutrino could change
-ﬂavor while in ﬂight, called “neutrino oscillation”, if neutrinos have mass and mixing exists between ﬂavor and mass eigenstates. 
+1. Python codes for numerical simulation of PMNS theory.
+2. Building quantum-circuits using the Qiskit framework (The primary version of Qiskit uses Python programming language and is well supported on the Jupyter Notebook environment).
+3. Simulating the quantum circuits on the QasmSimulator, a tool developed by IBM to emulate the behavior of their actual quantum computers.
+4. Simulating quantum circuits on IBM's real quantum computers through cloud access.
 
 ## PMNS Theory
 Bruno Pontecorvo speculated that if neutrinos have mass, then mixing exists between the ﬂovor and mass eigenstates. Later the specific mechanism involving the mixing matrix was formalized by Maki, Nakagawa, and Sakata, now called the PMNS (Pontecorvo-Maki- Nakagawa-Sakata) theory. It states that each of the neutrino ﬂavor basis ( electron, muon and tau neutrinos) can be written as a superposition of three mass eigenstates (m1,m2 and m3). The transformation from neutrino mass basis to ﬂavor basis is achieved by the PMNS matrix.
