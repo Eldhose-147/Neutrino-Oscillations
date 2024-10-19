@@ -2,46 +2,37 @@
 
 ## Project Description
 
-This project aims at quantum simulation of __three flavour neutrino oscillations__ using __PMNS theory__, for both vacuum and matter interaction, as well as with and without CP violation on a subspace of a two-qubit Hilbert space. The following work is presented is this project. For more information of neutrino-oscillation and PMNS theory refer [Project report](Project_report.pdf)
+This project aims at quantum simulation of the `Three Flavour Neutrino Oscillations` using `PMNS Theory`, for both vacuum and matter interaction, as well as with and without CP violation on a subspace of a two-qubit Hilbert space. The following work is presented is this project.
 
 1. Python codes for numerical simulation of PMNS theory.
-2. Building quantum-circuits using the Qiskit framework (The primary version of Qiskit uses Python programming language and is well supported on the Jupyter Notebook environment).
-3. Simulating the quantum circuits on the QasmSimulator, a tool developed by IBM to emulate the behavior of their actual quantum computers.
-4. Simulating quantum circuits on IBM's real quantum computers through cloud access.
+2. Building quantum-circuits using the `Qiskit` framework (The primary version of Qiskit uses Python programming language and is well supported on the Jupyter Notebook environment).
+3. Simulating the quantum circuits on the `QasmSimulator`, a tool developed by IBM to emulate the behavior of their actual quantum computers.
+4. Simulating quantum circuits on `IBM's quantum computers` through cloud access.
 
-## PMNS Theory
-Bruno Pontecorvo speculated that if neutrinos have mass, then mixing exists between the ﬂovor and mass eigenstates. Later the specific mechanism involving the mixing matrix was formalized by Maki, Nakagawa, and Sakata, now called the PMNS (Pontecorvo-Maki- Nakagawa-Sakata) theory. It states that each of the neutrino ﬂavor basis ( electron, muon and tau neutrinos) can be written as a superposition of three mass eigenstates (m1,m2 and m3). The transformation from neutrino mass basis to ﬂavor basis is achieved by the PMNS matrix.
-
-![Alt text](Images/image_2023-10-08_181547922.png)
+For more information on Neutrino-Oscillation and PMNS theory, refer [Project report](Project_report.pdf)
  
-![Alt text](<Images/Screenshot from 2023-10-08 18-13-17.png>)
-
-
-## Why Quantum Simulation ?
-
-The idea of quantum simulations is the use of quantum systems to simulate other quantum systems in programmable fashion. It is impossible to truly simulate a quantum mechanical event using a classical universal device. According to the lecture by Feyman in 1981, the only way to simulate events in nature is by using a system that is quantum mechanical.Oscillating neutrino beams exhibit quantum coherence over distances of thousands of kilometers. Precise measurements of parameters in the PMNS framework might lead to new physics beyond the Standard Model. However it is very diﬃcult to determine these in the experiments. Quantum simulation are the best alternatives to study this phenomenology. Thus if we could encode the state of neutrinos in some n qubit hilbert space and ﬁnd unitary gates to evolve the quantum state, we could simulate neutrino oscillation on a quantum computer. However with the present level of technology quantum simulations are noisy. Thus noise reducing algorithms are also implemented to get accurate results.
-
 ## Numerical Simulation 
 
-__Code: Neutrino_osc.py__
+__Code__: [Neutrino_osc.py](Neutrino_osc.py)
 
-The graphs below show the _flavor state probability_ as a function of _L/E_,(where L is the distance travelled and E is the evergy),for each of the initial flavor state.
+The code gives the graphs of the _flavor state probability_ as a function of _L/E_,(where L is the distance travelled and E is the evergy),for each of the initial flavor state.
 
 ![Alt text](Images/Electron_vacuum_oscillation.jpg)
 ![Alt text](Images/Muon_vacuum_oscillation.jpg)
 ![Alt text](Images/Tau_vacuum_oscillation.jpg)
-## Matter Interaction
-__Code: Matter_Inter.py__
+
+### Matter Interaction
+
+__Code__: [Matter_Inter.py](Matter_Inter.py)
   
-The graphs below show the _flavor state probability_ as a function of _L/E_,for an initial muon flavor state, in the presence of matter interaction. The interaction potential values used are $V=0, 10^{-3}, 10^{-5}$
+The code gives the graphs of the _flavor state probability_ as a function of _L/E_,for an initial muon flavor state, in the presence of matter interaction. The interaction potential values used are $V=0, 10^{-3}, 10^{-5}$
 
 ![Alt text](Images/matter_muon_electron.jpg)
 ![Alt text](Images/matter_muon_muon.jpg)
+
 ## Quantum Simulations
 
 In order to do quantum simulations of neutrino oscillations, the system needs to be represented in a two-qubit hilbert space. Each of the orthogonal states |0, 0⟩ , |0, 1⟩ , |1, 0⟩ represents the three neutrino ﬂavors - electron, muon, tau respectively. The forth state |1, 1⟩ is taken to be a sterile neutrino (Sterile neutrinos are hypothetical particles that are believed to interact only via gravity and not via any of the other fundamental interactions of the Standard Model) that is considered decoupled to the other three states.
-
-
 
 ### Building the Quantum Circuit
 
@@ -52,58 +43,66 @@ The controlled-u rotation gate when the target qubit is the LSB(Least signiﬁca
 ![Alt text](<Images/Screenshot from 2023-10-08 19-10-54.png>)
 ![Alt text](<Images/Screenshot from 2023-10-08 19-10-59.png>)
 
-
 ## IBM Qiskit
 
 IBM has developed some of the most advanced quantum computers in the world. Moreover they have given free cloud access to their quantum computers through Qiskit framework. Qiskit is an open-source software development kit for working with quantum computers
-at the level of circuits, pulses, and algorithms and running them on prototype quantum devices on IBM Quantum Experience or on simulators on a local computer. The primary version of Qiskit uses Python programming language and is well supported on the Jupyter Notebook environment.
+at the level of circuits, pulses, and algorithms and running them on prototype quantum devices on IBM Quantum Experience or on simulators on a local computer. The primary version of Qiskit uses Python programming language and is well supported on the Jupyter Notebook environment. To install Qiskit package in Jupyter Notebook, run:
 
+```python
+!pip install qiskit
+```
 ### QasmSimulator
-
-__Code: Qasm_sim.ipynb__
     
-The QasmSimulator backend is designed to mimic an actual IBM quantum computer. The quantum measurements in a real IBM quantum computer has a lot of noise in the result. But the QasmSimulator can simulate quantum circuits both ideally and subject to noise modeling. The circuit was run in the QasmSimulator to verify the circuit and compare it with the numerical simulations. The code "Qasm_sim.ipynb" gives the simulations in QasmSimulator.
+The QasmSimulator backend is designed to mimic an actual IBM quantum computer. The quantum measurements in a real IBM quantum computer has a lot of noise in the result. But the QasmSimulator can simulate quantum circuits both ideally and subject to noise modeling. To use the QasmSimulator, run the code:
 
-The following results were obtained.
+```python
+from qiskit import Aer
+# Initialize the QasmSimulator
+simulator = Aer.get_backend('qasm_simulator')
+```
+The circuit was run in the QasmSimulator to verify it and compare it with the numerical simulations. The following results were obtained, showing the _flavor state probability_ as a function of _L/E_.
+
+__Code__: [Qasm_sim.ipynb](Qasm_sim.ipynb)
 
 ![Alt text](Images/Electron_vacuum_QASM.jpg)
 ![Alt text](Images/Muon_vacuum_QASM.jpg)
 ![Alt text](Images/Tau_vacuum_QASM.jpg)
 
-
-
 The QasmSimulator measurements matches exactly with the theoritical results. This proves that the quantum circuit built is accurate.
 
 ### Real Quantum Simulations
 
-__Code: IBM_sim_electron.ipynb, IBM_sim_muon.ipynb, IBM_sim_tau.ipynb__
+To use an IBM quantum computer run the following code.
 
-The quantum circuit was run on the "ibmq-manila" backend. The results obtained had a lot of noise which made the measurements deviate from thetheoritical results. Thus the "CompleteMeasFitter" and "complete-meas-cal" functions were imported from the qiskit.ignis.mitigation package. This reduced the error by signiﬁcant amount. The following results were obtained from the real quantum computer simulations.
+```python
+from qiskit import IBMQ
+```
+```python
+IBMQ.load_account()
+```
+```python
+provider = IBMQ.get_provider(hub='ibm-q', group='open', project='main')
+```
+To find all the backends, use the code:
+```python
+provider.backends()
+```
+To check the status of the backend run:
+```python
+#Here we are checking the status of 'ibmq_manila' backend
+status('ibmq_manila').to_dict()
+```
+Find a backend with less pending jobs and to use the backend run:
+```python
+qcomp = provider.get_backend('ibmq_lima')
+```
+The results obtained had a lot of noise which made the measurements deviate from the theoritical results. Thus the "CompleteMeasFitter" and "complete-meas-cal" functions were imported from the qiskit.ignis.mitigation package. This reduced the error by signiﬁcant amount. 
+```python
+from qiskit.ignis.mitigation.measurement import (CompleteMeasFitter,complete_meas_cal)
+```
+The following results were obtained from the real quantum computer simulations after error mitigations.
 
+__Code__: [IBM_sim_electron.ipynb](IBM_sim_electron.ipynb), [IBM_sim_muon.ipynb](IBM_sim_muon.ipynb), [IBM_sim_tau.ipynb](IBM_sim_tau.ipynb)
 ![Alt text](Images/Electron_vacuum_IBM.jpg)
 ![Alt text](Images/Muon_vacuum_IBM.jpg)
 ![Alt text](Images/Tau_vacuum_IBM.jpg)
-
-## References
-
-[1] Ioannisian, A. and Pokorski, S. (2018) ‘Three neutrino oscillations in matter’, Physics Letters B, 782, pp. 641–645. doi:10.1016/j.physletb.2018.06.001.
-
-[2] Freund, M. (2001) ‘Analytic approximations for three neutrino oscillation parameters and probabilities in matter’, Physical Review D, 64(5). doi:10.1103/physrevd.64.053003.
-
-[3] Giganti, C., Lavignac, S. and Zito, M. (2018) ‘Neutrino oscillations: The rise of the pmns paradigm’, Progress in Particle and Nuclear Physics, 98, pp. 1–54. doi:10.1016/j.ppnp.2017.10.001
-
-[4] Argüelles, C.A. and Jones, B.J. (2019) ‘Neutrino oscillations in a quantum processor’,Physical Review Research, 1(3). doi:10.1103/physrevresearch.1.033176.
-
-[5] Molewski, M.J. and Jones, B.J.P. (2022) ‘Scalable qubit representations of neutrino
-
-mixing matrices’, Physical Review D, 105(5). doi:10.1103/physrevd.105.056024.
-
-[6] Nguyen, H.C. et al. (2023) ‘Simulating neutrino oscillations on a superconducting
-
-qutrit’, Physical Review D, 108(2). doi:10.1103/physrevd.108.023013.
-
-[7] Nielsen, M.A. and Chuang, I.L. (2022) Quantum Computation and Quantum Information. Cambridge: Cambridge University Press.
-
-[8] Oliveira, I.S. (2007) NMR Quantum Information Processing. Amsterdam: Elsevier.23
-
-
